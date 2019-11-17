@@ -1,3 +1,4 @@
+import { MaterialModule } from './../shared/modules/material-module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,7 +10,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   declarations: [DashboardComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    MaterialModule
   ]
 })
 export class HomeModule { }

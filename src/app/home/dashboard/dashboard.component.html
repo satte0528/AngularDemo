@@ -1,1 +1,41 @@
-<p>dashboard works!</p>
+<p>dashboard-home works...!</p>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Favorite food" value="Sushi">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Leave a comment"></textarea>
+    </mat-form-field>
+  </form>
+
+  <h3>Raised Buttons</h3>
+<div class="example-button-row">
+  <button mat-raised-button>Basic</button>
+  <button mat-raised-button color="primary">Primary</button>
+  <button mat-raised-button color="accent">Accent</button>
+  <button mat-raised-button color="warn">Warn</button>
+  <button mat-raised-button disabled>Disabled</button>
+  <a mat-raised-button routerLink=".">Link</a>
+</div>
+
+<h4>Basic mat-select</h4>
+<mat-form-field>
+  <mat-label>Favorite food</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<h4>Basic native select</h4>
+<mat-form-field>
+  <mat-label>Cars</mat-label>
+  <select matNativeControl required>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+  </select>
+</mat-form-field>
