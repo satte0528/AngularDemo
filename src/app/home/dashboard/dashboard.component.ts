@@ -1,3 +1,4 @@
+import { DemoService } from './../../core/services/demo.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  dataArr:any[] = [];
+
+  constructor(private _service: DemoService) {
+   }
 
   ngOnInit() {
+    this._service.getAllBreeds().subscribe((data: any) => {
+      console.log(data);
+      this.dataArr = data.message.terrier;
+    });
   }
 
 
