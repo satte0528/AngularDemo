@@ -1,3 +1,4 @@
+import { MaterialModule } from './../shared/modules/material-module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,7 +10,8 @@ import { ProfileHomeComponent } from './profile-home/profile-home.component';
   declarations: [ProfileHomeComponent],
   imports: [
     CommonModule,
-    ProfileRoutingModule
+    ProfileRoutingModule,
+    MaterialModule
   ]
 })
 export class ProfileModule { }
