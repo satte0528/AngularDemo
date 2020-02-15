@@ -1,0 +1,22 @@
+<p>newemployee works!</p>
+<div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="40px">
+
+  <span>Name: {{inputName}}</span>
+
+  <mat-form-field>
+    <input matInput placeholder="Enter employe name:" value="{{inputName}}" />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Enter employe name:" [value]="inputName" />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Enter employe name:" [(ngModel)]="inputName" />
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="test()">Save</button>
+
+  <div fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="10px" *ngFor="let item of jsonData;">
+    <div>{{item.userId}}</div>
+    <div>{{item.title}}</div>
+    <div>{{item.body}}</div>
+  </div>
+</div>
