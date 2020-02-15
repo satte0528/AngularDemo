@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
   dataJson:any;
+  
 
   constructor(private _service: DemoService) {
    }

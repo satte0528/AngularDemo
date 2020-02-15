@@ -12,7 +12,7 @@ const routes: Routes = [
   {
     path     : 'forgot',
     component: ForgotComponent
-  } 
+  }
 
 ];
 
